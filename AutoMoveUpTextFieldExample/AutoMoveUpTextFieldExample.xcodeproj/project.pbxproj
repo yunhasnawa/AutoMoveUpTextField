@@ -13,10 +13,10 @@
 		5C87EA891C1F1E31008957F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EA871C1F1E31008957F4 /* Main.storyboard */; };
 		5C87EA8B1C1F1E31008957F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EA8A1C1F1E31008957F4 /* Assets.xcassets */; };
 		5C87EA8E1C1F1E31008957F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EA8C1C1F1E31008957F4 /* LaunchScreen.storyboard */; };
-		5C87EA981C1F1E98008957F4 /* UIViewController+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EA971C1F1E98008957F4 /* UIViewController+YYHelper.m */; };
-		5C87EA9B1C1F1EBE008957F4 /* YYAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EA9A1C1F1EBE008957F4 /* YYAppHelper.m */; };
-		5C87EAA01C1F1EFC008957F4 /* NSNumber+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EA9D1C1F1EFC008957F4 /* NSNumber+YYHelper.m */; };
-		5C87EAA11C1F1EFC008957F4 /* NSString+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EA9F1C1F1EFC008957F4 /* NSString+YYHelper.m */; };
+		5C87EACB1C1F47C7008957F4 /* NSNumber+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAC41C1F47C7008957F4 /* NSNumber+YYHelper.m */; };
+		5C87EACC1C1F47C7008957F4 /* NSString+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAC61C1F47C7008957F4 /* NSString+YYHelper.m */; };
+		5C87EACD1C1F47C7008957F4 /* UIViewController+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAC81C1F47C7008957F4 /* UIViewController+YYHelper.m */; };
+		5C87EACE1C1F47C7008957F4 /* YYAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EACA1C1F47C7008957F4 /* YYAppHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		5C87EA8A1C1F1E31008957F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C87EA8D1C1F1E31008957F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C87EA8F1C1F1E31008957F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C87EA961C1F1E98008957F4 /* UIViewController+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EA971C1F1E98008957F4 /* UIViewController+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YYHelper.m"; sourceTree = "<group>"; };
-		5C87EA991C1F1EBE008957F4 /* YYAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAppHelper.h; sourceTree = "<group>"; };
-		5C87EA9A1C1F1EBE008957F4 /* YYAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAppHelper.m; sourceTree = "<group>"; };
-		5C87EA9C1C1F1EFC008957F4 /* NSNumber+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EA9D1C1F1EFC008957F4 /* NSNumber+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+YYHelper.m"; sourceTree = "<group>"; };
-		5C87EA9E1C1F1EFC008957F4 /* NSString+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EA9F1C1F1EFC008957F4 /* NSString+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYHelper.m"; sourceTree = "<group>"; };
+		5C87EAC31C1F47C7008957F4 /* NSNumber+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+YYHelper.h"; sourceTree = "<group>"; };
+		5C87EAC41C1F47C7008957F4 /* NSNumber+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+YYHelper.m"; sourceTree = "<group>"; };
+		5C87EAC51C1F47C7008957F4 /* NSString+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYHelper.h"; sourceTree = "<group>"; };
+		5C87EAC61C1F47C7008957F4 /* NSString+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYHelper.m"; sourceTree = "<group>"; };
+		5C87EAC71C1F47C7008957F4 /* UIViewController+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YYHelper.h"; sourceTree = "<group>"; };
+		5C87EAC81C1F47C7008957F4 /* UIViewController+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YYHelper.m"; sourceTree = "<group>"; };
+		5C87EAC91C1F47C7008957F4 /* YYAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAppHelper.h; sourceTree = "<group>"; };
+		5C87EACA1C1F47C7008957F4 /* YYAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAppHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		5C87EA7D1C1F1E31008957F4 /* AutoMoveUpTextFieldExample */ = {
 			isa = PBXGroup;
 			children = (
-				5C87EA951C1F1E54008957F4 /* Helper */,
+				5C87EAC21C1F47C7008957F4 /* Helper */,
 				5C87EA811C1F1E31008957F4 /* AppDelegate.h */,
 				5C87EA821C1F1E31008957F4 /* AppDelegate.m */,
 				5C87EA841C1F1E31008957F4 /* ViewController.h */,
@@ -92,19 +92,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5C87EA951C1F1E54008957F4 /* Helper */ = {
+		5C87EAC21C1F47C7008957F4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				5C87EA9C1C1F1EFC008957F4 /* NSNumber+YYHelper.h */,
-				5C87EA9D1C1F1EFC008957F4 /* NSNumber+YYHelper.m */,
-				5C87EA9E1C1F1EFC008957F4 /* NSString+YYHelper.h */,
-				5C87EA9F1C1F1EFC008957F4 /* NSString+YYHelper.m */,
-				5C87EA991C1F1EBE008957F4 /* YYAppHelper.h */,
-				5C87EA9A1C1F1EBE008957F4 /* YYAppHelper.m */,
-				5C87EA961C1F1E98008957F4 /* UIViewController+YYHelper.h */,
-				5C87EA971C1F1E98008957F4 /* UIViewController+YYHelper.m */,
+				5C87EAC31C1F47C7008957F4 /* NSNumber+YYHelper.h */,
+				5C87EAC41C1F47C7008957F4 /* NSNumber+YYHelper.m */,
+				5C87EAC51C1F47C7008957F4 /* NSString+YYHelper.h */,
+				5C87EAC61C1F47C7008957F4 /* NSString+YYHelper.m */,
+				5C87EAC71C1F47C7008957F4 /* UIViewController+YYHelper.h */,
+				5C87EAC81C1F47C7008957F4 /* UIViewController+YYHelper.m */,
+				5C87EAC91C1F47C7008957F4 /* YYAppHelper.h */,
+				5C87EACA1C1F47C7008957F4 /* YYAppHelper.m */,
 			);
-			name = Helper;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,13 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C87EA981C1F1E98008957F4 /* UIViewController+YYHelper.m in Sources */,
 				5C87EA861C1F1E31008957F4 /* ViewController.m in Sources */,
-				5C87EA9B1C1F1EBE008957F4 /* YYAppHelper.m in Sources */,
-				5C87EAA11C1F1EFC008957F4 /* NSString+YYHelper.m in Sources */,
+				5C87EACC1C1F47C7008957F4 /* NSString+YYHelper.m in Sources */,
+				5C87EACD1C1F47C7008957F4 /* UIViewController+YYHelper.m in Sources */,
+				5C87EACB1C1F47C7008957F4 /* NSNumber+YYHelper.m in Sources */,
 				5C87EA831C1F1E31008957F4 /* AppDelegate.m in Sources */,
+				5C87EACE1C1F47C7008957F4 /* YYAppHelper.m in Sources */,
 				5C87EA801C1F1E31008957F4 /* main.m in Sources */,
-				5C87EAA01C1F1EFC008957F4 /* NSNumber+YYHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
