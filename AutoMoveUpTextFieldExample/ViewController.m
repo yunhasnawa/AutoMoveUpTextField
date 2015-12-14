@@ -15,14 +15,14 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Added Methods
@@ -46,12 +46,12 @@
 
 - (NSArray*) textFieldsRegisteredForDismissButton
 {
-    return @[self.textFieldMessage];
+    return @[self.textFieldMessage]; // Which text input you need to have auto muve up behavior. You can put more than one components inside the array returned by this function.
 }
 
 - (IBAction)sendButtonClick:(id)sender
 {
-    [self dismissKeyboard];
+    [self dismissKeyboard]; // This is provided by the helper
 }
 
 @end
