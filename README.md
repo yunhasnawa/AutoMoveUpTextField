@@ -8,6 +8,7 @@ All you need to do are:
 <br/>2. Import UIViewController+YYHelper.h to any view controller that has text input you want to be auto moved when UIKeyboard appears.
 <br/>3. Make sure your view controller is being the delegate of your text input: <UITextFieldDelegate> or <UITextInputDelegate>, or both depends on your need.
 <br/>4. The library will look good on real device, but in simulator it may not work if you connect the simulator to hardware keyboard. To disable it, select 'Hardware' -> Keyboard -> Uncheck 'Connect Hardware Keyboard' on simulator window.
+<br/>5. If you use Swift, don't forget to add Objective-C <a href="http://stackoverflow.com/questions/24002369/how-to-call-objective-c-code-from-swift">bridging header</a> file to your project first.
 </p>
 <p>
 The rest of code lines are explained in the ViewController source file file in the example.
