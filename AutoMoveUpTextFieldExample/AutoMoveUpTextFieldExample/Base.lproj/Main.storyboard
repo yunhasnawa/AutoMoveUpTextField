@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,27 +18,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your text here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-N5-pLC">
-                                <rect key="frame" x="20" y="617" width="285" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your text here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-N5-pLC">
+                                <rect key="frame" x="16" y="617" width="293" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ssr-Gg-vaE"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-hl-ZnK">
-                                <rect key="frame" x="313" y="617" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-hl-ZnK">
+                                <rect key="frame" x="317" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="7Vp-yb-re7"/>
+                                    <constraint firstAttribute="height" constant="30" id="Wi8-XK-NzK"/>
+                                </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ees-Mm-gHF"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TaO-7n-5co">
+                                <rect key="frame" x="16" y="20" width="343" height="589"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hsP-N5-pLC" firstAttribute="top" secondItem="Tjc-hl-ZnK" secondAttribute="top" id="0Y8-dh-LkW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tjc-hl-ZnK" secondAttribute="trailing" constant="-4" id="1iC-MH-WdC"/>
+                            <constraint firstItem="Tjc-hl-ZnK" firstAttribute="leading" secondItem="hsP-N5-pLC" secondAttribute="trailing" constant="8" symbolic="YES" id="5mJ-fe-f1s"/>
+                            <constraint firstItem="Tjc-hl-ZnK" firstAttribute="top" secondItem="TaO-7n-5co" secondAttribute="bottom" constant="8" id="Cel-HT-r2z"/>
+                            <constraint firstItem="TaO-7n-5co" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fl5-za-379"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tjc-hl-ZnK" secondAttribute="bottom" constant="20" id="ICj-oV-NC5"/>
+                            <constraint firstItem="TaO-7n-5co" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Or9-NF-ude"/>
+                            <constraint firstItem="TaO-7n-5co" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeS-dJ-z2r"/>
+                            <constraint firstItem="hsP-N5-pLC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c3q-Vg-jt8"/>
+                            <constraint firstItem="Tjc-hl-ZnK" firstAttribute="top" secondItem="TaO-7n-5co" secondAttribute="bottom" constant="8" id="fyq-Ol-b3A"/>
+                            <constraint firstItem="TaO-7n-5co" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="z9e-sd-M1C"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="textFieldMessage" destination="hsP-N5-pLC" id="MRz-q3-MSO"/>
+                        <outlet property="textViewChat" destination="TaO-7n-5co" id="nty-py-WPu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

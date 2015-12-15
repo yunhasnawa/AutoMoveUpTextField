@@ -55,7 +55,8 @@ class ViewController: UIViewController
     {
         self.addText()
         
-        self.dismissKeyboard();
+        self.dismissKeyboard(); ss
+        // This is provided by the helper
     }
     
     private func addText()

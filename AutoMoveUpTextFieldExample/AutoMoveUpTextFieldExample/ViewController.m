@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+- (void) addText;
+
 @end
 
 @implementation ViewController
@@ -49,9 +51,35 @@
     return @[self.textFieldMessage]; // Which text input you need to have auto muve up behavior. You can put more than one components inside the array returned by this function.
 }
 
+#pragma mark - Tester. These are not mandatory
+
 - (IBAction)sendButtonClick:(id)sender
 {
+    [self addText];
+    
     [self dismissKeyboard]; // This is provided by the helper
+}
+
+- (void) addText
+{
+    NSString* chat = self.textViewChat.text;
+    
+    NSString* newChat = self.textFieldMessage.text;
+    
+    chat = [chat stringByAppendingFormat:@"%@\n", newChat];
+    
+    self.textViewChat.text = chat;
+    
+    self.textFieldMessage.text = @"";
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [self addText];
+    
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end

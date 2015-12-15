@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *textFieldMessage;
+@property (strong, nonatomic) IBOutlet UITextView *textViewChat;
 
 - (IBAction)sendButtonClick:(id)sender;
 
