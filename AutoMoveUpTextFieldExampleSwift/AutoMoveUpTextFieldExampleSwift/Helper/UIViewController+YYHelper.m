@@ -18,6 +18,7 @@ CGRect _originalViewFrame;
 UIButton* _invisibleButton;
 CGFloat _textInputBottomTreshold = 0.f;
 CGRect _keyboardFrame;
+BOOL _isUp = NO;
 
 const CGFloat kDefaultUpDistanceAddition = 10.f;
 
@@ -99,6 +100,16 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
 - (CGFloat) textInputViewBottomTreshold
 {
     return _textInputBottomTreshold;
+}
+
+- (void) setIsUp:(BOOL) isUp
+{
+    _isUp = isUp;
+}
+
+- (BOOL) isUp
+{
+    return _isUp;
 }
 
 #pragma mark - Helpers
@@ -221,8 +232,43 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
 
 #pragma mark - Keyboard event handler
 
+/*
+- (void) testMethod
+{
+    CGRect originalFrame = [[self view] frame];
+    CGRect newFrame = originalFrame;
+    
+    // Save original frame
+    [self setOriginalViewFrame:originalFrame];
+    
+    CGFloat upDistance = 220.f;
+    
+    // Move up the view
+    newFrame.origin.y -= upDistance;
+    
+    // Adjust the height so the view doesn't have a 'hole' at bottom
+    //newFrame.size.height += upDistance;
+    
+    NSLog(@"MOVE UP! %f point..", upDistance);
+    
+    [UIView beginAnimations:@"moveUp" context:NULL];
+    
+    [[self view] setFrame:newFrame];
+    
+    [UIView commitAnimations];
+    
+    CGRectLog(self.inputView.frame);
+}
+*/
+
 - (void) keyboardWillShowWithNotification:(NSNotification *)notification
 {
+    if([self isUp])
+    {
+        NSLog(@"The view has been moved up!");
+        return;
+    }
+    
     CGRect originalFrame = [[self view] frame];
     CGRect newFrame = originalFrame;
     
@@ -235,24 +281,42 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
     newFrame.origin.y -= upDistance;
     
     // Adjust the height so the view doesn't have a 'hole' at bottom
-    newFrame.size.height += upDistance;
+    // EDIT: This one jeopardize the view if the prroject uses auto layout
+    // It is because autolayout constraint makes the text input sticks to its parent view.
+    // If parent view is not moving then the input will also not move.
+    // Finally, the input will stay on its position.
+    //newFrame.size.height += upDistance;
     
-    //NSLog(@"MOVE UP! %f point..", upDistance);
+    NSLog(@"MOVE UP! %f point..", upDistance);
     
     [UIView beginAnimations:@"moveUp" context:NULL];
     
     [[self view] setFrame:newFrame];
     
     [UIView commitAnimations];
+    
+    CGRectLog(self.inputView.frame);
+    
+    [self setIsUp:YES];
 }
 
 - (void) keyboardWillHideWithNotification:(NSNotification *)notification
 {
+    if(![self isUp])
+    {
+        NSLog(@"The view is already in normal state!");
+        return;
+    }
+    
     [UIView beginAnimations:@"moveDown" context:NULL];
     
     [[self view] setFrame:[self originalViewFrame]];
     
     [UIView commitAnimations];
+    
+    CGRectLog(self.inputView.frame);
+    
+    [self setIsUp:NO];
 }
 
 - (UIButton*) invisibleButton

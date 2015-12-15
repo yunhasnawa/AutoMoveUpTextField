@@ -15,6 +15,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.yellowColor();
     }
 
     override func didReceiveMemoryWarning()
@@ -48,6 +49,7 @@ class ViewController: UIViewController
     
     @IBAction func sendButtonClick(sender: AnyObject)
     {
+        //self.testMethod();
         self.dismissKeyboard();
     }
 }

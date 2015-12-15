@@ -29,4 +29,6 @@
 - (CGRect) frameAboveKeyboard;
 - (void) dismissKeyboard;
 
+//- (void) testMethod;
+
 @end
