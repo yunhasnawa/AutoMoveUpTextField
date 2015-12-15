@@ -25,7 +25,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Added Methods
+#pragma mark - Added methods. All methods and commented code below this mark you should add it to your project
 
 - (void) viewWillDisappear:(BOOL)animated
 {
