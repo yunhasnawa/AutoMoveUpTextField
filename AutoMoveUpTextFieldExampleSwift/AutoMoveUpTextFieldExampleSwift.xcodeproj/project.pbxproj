@@ -12,10 +12,10 @@
 		5C87EAB41C1F470D008957F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EAB21C1F470D008957F4 /* Main.storyboard */; };
 		5C87EAB61C1F470D008957F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EAB51C1F470D008957F4 /* Assets.xcassets */; };
 		5C87EAB91C1F470D008957F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87EAB71C1F470D008957F4 /* LaunchScreen.storyboard */; };
-		5C87EAD81C1F4801008957F4 /* NSNumber+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAD11C1F4801008957F4 /* NSNumber+YYHelper.m */; };
-		5C87EAD91C1F4801008957F4 /* NSString+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAD31C1F4801008957F4 /* NSString+YYHelper.m */; };
-		5C87EADA1C1F4801008957F4 /* UIViewController+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EAD51C1F4801008957F4 /* UIViewController+YYHelper.m */; };
-		5C87EADE1C1F49F7008957F4 /* YYAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87EADD1C1F49F7008957F4 /* YYAppHelper.m */; };
+		5CA869AB1C256F6800120CB4 /* NSNumber+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA869A41C256F6800120CB4 /* NSNumber+YYHelper.m */; };
+		5CA869AC1C256F6800120CB4 /* NSString+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA869A61C256F6800120CB4 /* NSString+YYHelper.m */; };
+		5CA869AD1C256F6800120CB4 /* UIViewController+YYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA869A81C256F6800120CB4 /* UIViewController+YYHelper.m */; };
+		5CA869AE1C256F6800120CB4 /* YYAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA869AA1C256F6800120CB4 /* YYAppHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,15 +26,15 @@
 		5C87EAB51C1F470D008957F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C87EAB81C1F470D008957F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C87EABA1C1F470D008957F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C87EAD01C1F4801008957F4 /* NSNumber+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EAD11C1F4801008957F4 /* NSNumber+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+YYHelper.m"; sourceTree = "<group>"; };
-		5C87EAD21C1F4801008957F4 /* NSString+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EAD31C1F4801008957F4 /* NSString+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYHelper.m"; sourceTree = "<group>"; };
-		5C87EAD41C1F4801008957F4 /* UIViewController+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YYHelper.h"; sourceTree = "<group>"; };
-		5C87EAD51C1F4801008957F4 /* UIViewController+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YYHelper.m"; sourceTree = "<group>"; };
-		5C87EADC1C1F49F7008957F4 /* YYAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAppHelper.h; sourceTree = "<group>"; };
-		5C87EADD1C1F49F7008957F4 /* YYAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAppHelper.m; sourceTree = "<group>"; };
 		5C87EAE11C1F4A71008957F4 /* AutoMoveUpTextFieldExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoMoveUpTextFieldExampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		5CA869A31C256F6800120CB4 /* NSNumber+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+YYHelper.h"; sourceTree = "<group>"; };
+		5CA869A41C256F6800120CB4 /* NSNumber+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+YYHelper.m"; sourceTree = "<group>"; };
+		5CA869A51C256F6800120CB4 /* NSString+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYHelper.h"; sourceTree = "<group>"; };
+		5CA869A61C256F6800120CB4 /* NSString+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYHelper.m"; sourceTree = "<group>"; };
+		5CA869A71C256F6800120CB4 /* UIViewController+YYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YYHelper.h"; sourceTree = "<group>"; };
+		5CA869A81C256F6800120CB4 /* UIViewController+YYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YYHelper.m"; sourceTree = "<group>"; };
+		5CA869A91C256F6800120CB4 /* YYAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAppHelper.h; sourceTree = "<group>"; };
+		5CA869AA1C256F6800120CB4 /* YYAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAppHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		5C87EAAD1C1F470D008957F4 /* AutoMoveUpTextFieldExampleSwift */ = {
 			isa = PBXGroup;
 			children = (
-				5C87EACF1C1F4801008957F4 /* Helper */,
+				5CA869A21C256F6800120CB4 /* Helper */,
 				5C87EAAE1C1F470D008957F4 /* AppDelegate.swift */,
 				5C87EAB01C1F470D008957F4 /* ViewController.swift */,
 				5C87EAB21C1F470D008957F4 /* Main.storyboard */,
@@ -79,19 +79,20 @@
 			path = AutoMoveUpTextFieldExampleSwift;
 			sourceTree = "<group>";
 		};
-		5C87EACF1C1F4801008957F4 /* Helper */ = {
+		5CA869A21C256F6800120CB4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				5C87EADC1C1F49F7008957F4 /* YYAppHelper.h */,
-				5C87EADD1C1F49F7008957F4 /* YYAppHelper.m */,
-				5C87EAD01C1F4801008957F4 /* NSNumber+YYHelper.h */,
-				5C87EAD11C1F4801008957F4 /* NSNumber+YYHelper.m */,
-				5C87EAD21C1F4801008957F4 /* NSString+YYHelper.h */,
-				5C87EAD31C1F4801008957F4 /* NSString+YYHelper.m */,
-				5C87EAD41C1F4801008957F4 /* UIViewController+YYHelper.h */,
-				5C87EAD51C1F4801008957F4 /* UIViewController+YYHelper.m */,
+				5CA869A31C256F6800120CB4 /* NSNumber+YYHelper.h */,
+				5CA869A41C256F6800120CB4 /* NSNumber+YYHelper.m */,
+				5CA869A51C256F6800120CB4 /* NSString+YYHelper.h */,
+				5CA869A61C256F6800120CB4 /* NSString+YYHelper.m */,
+				5CA869A71C256F6800120CB4 /* UIViewController+YYHelper.h */,
+				5CA869A81C256F6800120CB4 /* UIViewController+YYHelper.m */,
+				5CA869A91C256F6800120CB4 /* YYAppHelper.h */,
+				5CA869AA1C256F6800120CB4 /* YYAppHelper.m */,
 			);
-			path = Helper;
+			name = Helper;
+			path = ../../AutoMoveUpTextFieldExample/AutoMoveUpTextFieldExample/Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C87EAB11C1F470D008957F4 /* ViewController.swift in Sources */,
-				5C87EADA1C1F4801008957F4 /* UIViewController+YYHelper.m in Sources */,
+				5CA869AD1C256F6800120CB4 /* UIViewController+YYHelper.m in Sources */,
 				5C87EAAF1C1F470D008957F4 /* AppDelegate.swift in Sources */,
-				5C87EADE1C1F49F7008957F4 /* YYAppHelper.m in Sources */,
-				5C87EAD81C1F4801008957F4 /* NSNumber+YYHelper.m in Sources */,
-				5C87EAD91C1F4801008957F4 /* NSString+YYHelper.m in Sources */,
+				5CA869AE1C256F6800120CB4 /* YYAppHelper.m in Sources */,
+				5CA869AB1C256F6800120CB4 /* NSNumber+YYHelper.m in Sources */,
+				5CA869AC1C256F6800120CB4 /* NSString+YYHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

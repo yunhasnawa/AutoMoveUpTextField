@@ -277,6 +277,9 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
     
     CGFloat upDistance = [self upDistanceWithNotification:notification];
     
+    if(upDistance <= 0)
+        return;
+    
     // Move up the view
     newFrame.origin.y -= upDistance;
     
