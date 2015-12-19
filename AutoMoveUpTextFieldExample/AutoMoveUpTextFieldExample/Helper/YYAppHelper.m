@@ -219,9 +219,9 @@ CGRect CGRectResizeFitWidth(CGRect rect, CGFloat newWidth)
     return CGRectMake(rect.origin.x, rect.origin.y, newWidth, newHeight);
 }
 
-void CGRectLog(CGRect rect)
+void CGRectLog(CGRect rect, NSString* tag)
 {
-    NSLog(@"{x:%f, y:%f, width:%f, height:%f}", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+    NSLog(@"%@ {x:%f, y:%f, width:%f, height:%f}", tag, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
 }
 
 @end

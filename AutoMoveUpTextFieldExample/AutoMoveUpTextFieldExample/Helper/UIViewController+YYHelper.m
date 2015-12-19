@@ -15,6 +15,7 @@ UITextField* _activeTextField;
 UITextView* _activeTextView;
 CGFloat _upDistanceAddition = 0.f;
 CGRect _originalViewFrame;
+CGRect _movedUpViewFrame;
 UIButton* _invisibleButton;
 CGFloat _textInputBottomTreshold = 0.f;
 CGRect _keyboardFrame;
@@ -70,6 +71,16 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
 - (CGRect) originalViewFrame
 {
     return _originalViewFrame;
+}
+
+- (void) setMovedUpViewFrame:(CGRect) movedUpViewFrame
+{
+    _movedUpViewFrame = movedUpViewFrame;
+}
+
+- (CGRect) movedUpViewFrame
+{
+    return _movedUpViewFrame;
 }
 
 - (void) setKeyboardFrame:(CGRect) keyboardFrame
@@ -140,11 +151,13 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
     
     CGRect inputViewframe = [self frameOfTextInputViewRelativeToSelfView]; // Y nya ngawur.
     
+    CGRect inputViewFrameOnWindow = [self frameInWindowOfFrame:inputViewframe];
+    
     CGFloat keyboardHeight = keyboardFrame.size.height;
     
     CGFloat keyboardTop = screenHeight - keyboardHeight;
     
-    CGFloat inputViewBottom = inputViewframe.origin.y + inputViewframe.size.height + [self textInputViewBottomTreshold];
+    CGFloat inputViewBottom = inputViewFrameOnWindow.origin.y + inputViewFrameOnWindow.size.height + [self textInputViewBottomTreshold];
     
     CGFloat differences = inputViewBottom - keyboardTop;
     
@@ -158,6 +171,19 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
     {
         return 0.f;
     }
+}
+
+- (CGRect) frameInWindowOfFrame:(CGRect) frame
+{
+    UIWindow* window = self.view.window;
+    
+    CGPoint convertedPoint = frame.origin;
+    
+    CGPoint pointInWindow = [self.view convertPoint:convertedPoint toView:window];
+    
+    frame.origin = pointInWindow;
+    
+    return frame;
 }
 
 - (UIView*) textInputView
@@ -174,7 +200,7 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
 
 - (CGRect) frameOfTextInputViewRelativeToSelfView
 {
-    UIView* inputSuperView = [[self inputView] superview];
+    UIView* inputSuperView = [[self textInputView] superview];
     
     if([self respondsToSelector:@selector(superviewForTextInputView:)])
     {
@@ -233,33 +259,31 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
 #pragma mark - Keyboard event handler
 
 /*
-- (void) testMethod
-{
-    CGRect originalFrame = [[self view] frame];
-    CGRect newFrame = originalFrame;
-    
-    // Save original frame
-    [self setOriginalViewFrame:originalFrame];
-    
-    CGFloat upDistance = 220.f;
-    
-    // Move up the view
-    newFrame.origin.y -= upDistance;
-    
-    // Adjust the height so the view doesn't have a 'hole' at bottom
-    //newFrame.size.height += upDistance;
-    
-    NSLog(@"MOVE UP! %f point..", upDistance);
-    
-    [UIView beginAnimations:@"moveUp" context:NULL];
-    
-    [[self view] setFrame:newFrame];
-    
-    [UIView commitAnimations];
-    
-    CGRectLog(self.inputView.frame);
-}
-*/
+ - (void) testMethod
+ {
+ CGRect originalFrame = [[self view] frame];
+ CGRect newFrame = originalFrame;
+ 
+ // Save original frame
+ [self setOriginalViewFrame:originalFrame];
+ 
+ CGFloat upDistance = 220.f;
+ 
+ // Move up the view
+ newFrame.origin.y -= upDistance;
+ 
+ // Adjust the height so the view doesn't have a 'hole' at bottom
+ //newFrame.size.height += upDistance;
+ 
+ NSLog(@"MOVE UP! %f point..", upDistance);
+ 
+ [UIView beginAnimations:@"moveUp" context:NULL];
+ 
+ [[self view] setFrame:newFrame];
+ 
+ [UIView commitAnimations];
+ }
+ */
 
 - (void) keyboardWillShowWithNotification:(NSNotification *)notification
 {
@@ -290,15 +314,15 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
     // Finally, the input will stay on its position.
     //newFrame.size.height += upDistance;
     
-    NSLog(@"MOVE UP! %f point..", upDistance);
-    
     [UIView beginAnimations:@"moveUp" context:NULL];
     
     [[self view] setFrame:newFrame];
     
+    [self setMovedUpViewFrame:newFrame];
+    
     [UIView commitAnimations];
     
-    CGRectLog(self.inputView.frame);
+    NSLog(@"MOVE UP! %f point..", upDistance);
     
     [self setIsUp:YES];
 }
@@ -311,13 +335,20 @@ const CGFloat kDefaultUpDistanceAddition = 10.f;
         return;
     }
     
-    [UIView beginAnimations:@"moveDown" context:NULL];
+    CGRect avf = [self.view frame];        // Actual View Frame
+    CGRect ovf = [self originalViewFrame]; // Original View Frame
+    CGRect mvf = [self movedUpViewFrame];  // Moved-up View Frame
     
-    [[self view] setFrame:[self originalViewFrame]];
-    
-    [UIView commitAnimations];
-    
-    CGRectLog(self.inputView.frame);
+    if(CGRectEqualToRect(avf, mvf))
+    {
+        [UIView beginAnimations:@"moveDown" context:NULL];
+        
+        [[self view] setFrame:ovf];
+        
+        [UIView commitAnimations];
+        
+        CGRectLog(self.inputView.frame, @"Down!!! Input View Frame:");
+    }
     
     [self setIsUp:NO];
 }

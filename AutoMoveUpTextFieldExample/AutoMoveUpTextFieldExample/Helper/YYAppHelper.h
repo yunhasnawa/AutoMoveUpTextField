@@ -22,6 +22,6 @@
 + (NSURL *) applicationDocumentsDirectory;
 
 CGRect CGRectResizeFitWidth(CGRect rect, CGFloat width);
-void CGRectLog(CGRect rect);
+void CGRectLog(CGRect rect, NSString* tag);
 
 @end
